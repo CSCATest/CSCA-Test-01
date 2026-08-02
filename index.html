@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSCA Mathematics Mock Exam - Analytic Geometry: Sets</title>
+<title>CSCA Mathematics Mock Exam - Mathematics: Sets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -478,7 +478,7 @@
     <div class="entry-card">
       <div class="entry-mark">CSCA</div>
       <h1>Mathematics Exam</h1>
-      <p class="entry-sub">Topic Assessment: <strong>Analytic Geometry — Sets</strong></p>
+      <p class="entry-sub">Topic Assessment: <strong>Mathematics — Sets</strong></p>
       
       <form id="entry-form" onsubmit="handleStartExam(event)">
         <div class="field">
@@ -510,7 +510,7 @@
     <header class="exam-header">
       <div class="exam-title">
         CSCA Mathematics Mock Exam
-        <small>Topic: Analytic Geometry (Sets)</small>
+        <small>Topic: Mathematics (Sets)</small>
       </div>
       <div class="timer-display" id="timer-display">60:00</div>
     </header>
@@ -551,7 +551,7 @@
         </div>
 
         <div class="question-card">
-          <span class="question-topic-tag">Analytic Geometry — Sets</span>
+          <span class="question-topic-tag">Mathematics — Sets</span>
           <div class="question-text" id="question-text">
             Question text will load here...
           </div>
@@ -616,7 +616,7 @@
   <!-- ============ SCRIPTS ============ -->
   <script>
     /* ==========================================================================
-       1. QUESTION BANK: 25 Analytic Geometry "Sets" Questions
+       1. QUESTION BANK: 25 Mathematics "Sets" Questions
           Includes questions from Jan, Dec, March, April, June papers & lessons.
        ========================================================================== */
     const questions = [
@@ -694,63 +694,63 @@
   },
   {
     id: 7,
-    question: "The solution set of the quadratic inequality $x^2 - 5x + 4 < 0$ is ( )",
+    question: "Let $A = \\{1,2,3\\}$. How many proper subsets does $A$ have? ( )",
     options: [
-      "A. $(-4,-1)$",
-      "B. $(-\\infty,1)\\cup(4,+\\infty)$",
-      "C. $(-\\infty,-4)\\cup(-1,+\\infty)$",
-      "D. $(1,4)$"
+      "A. $3$",
+      "B. $6$",
+      "C. $7$",
+      "D. $8$"
     ],
-    correct: 3,
-    explanation: "Factor: $x^2 - 5x + 4 = (x-1)(x-4)$. The product is negative when one factor is positive and the other negative, which happens for $1 < x < 4$. So the solution set is $(1,4)$. [CSCA 12.21 Q3]"
+    correct: 2,
+    explanation: "A set with $n$ elements has $2^n$ subsets in total. For $A = \\{1,2,3\\}$ ($n=3$), there are $2^3 = 8$ subsets. A proper subset excludes the set itself, so the number of proper subsets is $2^n - 1 = 8 - 1 = 7$. [Sets Lecture — Subsets and Proper Subsets]"
   },
   {
     id: 8,
-    question: "The solution set of the inequality $x^2 - x - 2 > 0$ is ( )",
+    question: "Let $A = \\{1,2\\}$ and $B = \\{x,y\\}$. Then the Cartesian product $A \\times B =$ ( )",
     options: [
-      "A. $\\{x \\mid x < -1 \\text{ or } x > 2\\}$",
-      "B. $\\{x \\mid -1 < x < 2\\}$",
-      "C. $\\{x \\mid x < -2 \\text{ or } x > -1\\}$",
-      "D. $\\{x \\mid -2 < x < 1\\}$"
+      "A. $\\{(1,x),(1,y),(2,x),(2,y)\\}$",
+      "B. $\\{(x,1),(y,1),(x,2),(y,2)\\}$",
+      "C. $\\{1,2,x,y\\}$",
+      "D. $\\{(1,2),(x,y)\\}$"
     ],
     correct: 0,
-    explanation: "Factor: $x^2 - x - 2 = (x-2)(x+1)$. The product is positive when both factors share the same sign: either both positive ($x > 2$) or both negative ($x < -1$). So the solution set is $\\{x \\mid x < -1 \\text{ or } x > 2\\}$. [CSCA 1.25 Q3]"
+    explanation: "The Cartesian product $A \\times B$ consists of all ordered pairs $(a,b)$ with $a \\in A$ and $b \\in B$, listed with the first coordinate from $A$ and the second from $B$. Pairing each element of $A = \\{1,2\\}$ with each element of $B = \\{x,y\\}$ gives $\\{(1,x),(1,y),(2,x),(2,y)\\}$. [Sets Lecture — Cartesian Product]"
   },
   {
     id: 9,
-    question: "The solution set of the quadratic inequality $3(x+4)(x-2) < 0$ is ( )",
+    question: "Let $A = \\{1,2,3,4\\}$ and $B = \\{3,4,5,6\\}$. The symmetric difference $A \\bigtriangleup B$ (elements in exactly one of the two sets) equals ( )",
     options: [
-      "A. $(2,+\\infty)$",
-      "B. $(-4,2)$",
-      "C. $(-\\infty,-4)\\cup(2,+\\infty)$",
-      "D. $(-\\infty,2)\\cup(-4,+\\infty)$"
+      "A. $\\{3,4\\}$",
+      "B. $\\{1,2,5,6\\}$",
+      "C. $\\{1,2,3,4,5,6\\}$",
+      "D. $\\emptyset$"
     ],
     correct: 1,
-    explanation: "The zeros are $x = -4$ and $x = 2$. Since the coefficient of $x^2$ is positive ($3 > 0$), the parabola opens upward and the expression is negative between the roots. So the solution set is $(-4, 2)$. [CSCA June Q3]"
+    explanation: "The symmetric difference $A \\bigtriangleup B = (A \\setminus B) \\cup (B \\setminus A)$ contains elements belonging to exactly one of the sets, excluding the shared elements. Here $A \\setminus B = \\{1,2\\}$ and $B \\setminus A = \\{5,6\\}$, so $A \\bigtriangleup B = \\{1,2,5,6\\}$. The shared elements $3$ and $4$ are excluded since they appear in both sets. [Sets Lecture — Symmetric Difference]"
   },
   {
     id: 10,
-    question: "The solution set of the rational inequality $\\dfrac{x-1}{x-2} \\leq 1$ is ( )",
+    question: "Which set-builder notation correctly represents \"the set of all even integers greater than $10$\"? ( )",
     options: [
-      "A. $(2,+\\infty)$",
-      "B. $[1,2)$",
-      "C. $(-\\infty,2)$",
-      "D. $(-\\infty,1]$"
+      "A. $\\{x \\mid x \\in \\mathbb{Z}, x > 10\\}$",
+      "B. $\\{x \\mid x \\in \\mathbb{Z}, x \\text{ is even}\\}$",
+      "C. $\\{x \\mid x \\in \\mathbb{Z}, x > 10 \\text{ and } x \\text{ is even}\\}$",
+      "D. $\\{x \\mid x \\text{ is even and } x < 10\\}$"
     ],
     correct: 2,
-    explanation: "$\\frac{x-1}{x-2} \\leq 1 \\Rightarrow \\frac{x-1}{x-2} - 1 \\leq 0 \\Rightarrow \\frac{x-1-(x-2)}{x-2} \\leq 0 \\Rightarrow \\frac{1}{x-2} \\leq 0$. Since $1 > 0$, we need $x - 2 < 0$, i.e. $x < 2$. Note $x = 2$ is excluded (denominator zero). Solution: $(-\\infty, 2)$. [CSCA 12.21 Q12]"
+    explanation: "Set-builder notation must capture every condition stated in words. \"Even integers greater than $10$\" requires both conditions at once: $x$ is an integer, $x > 10$, AND $x$ is even. Option A omits the evenness condition, Option B omits the size condition, and Option D reverses the inequality. Only Option C states all conditions correctly. [Sets Lecture — Set-Builder Notation]"
   },
   {
     id: 11,
-    question: "The solution set of the rational inequality $\\dfrac{2x+1}{x-2} \\leq 0$ is ( )",
+    question: "Which of the following statements about the empty set $\\emptyset$ is FALSE? ( )",
     options: [
-      "A. $\\left[-\\dfrac{1}{2}, 2\\right)$",
-      "B. $\\left(-\\infty, -\\dfrac{1}{2}\\right) \\cup (2, +\\infty)$",
-      "C. $\\left[-\\dfrac{1}{2}, 2\\right]$",
-      "D. $\\left(-\\infty, -\\dfrac{1}{2}\\right]$"
+      "A. $\\emptyset \\subseteq A$ for any set $A$",
+      "B. $\\emptyset \\in \\{\\emptyset\\}$",
+      "C. $\\emptyset = \\{0\\}$",
+      "D. $\\emptyset$ has $0$ elements"
     ],
-    correct: 0,
-    explanation: "The fraction is $\\leq 0$ when numerator and denominator have opposite signs (or numerator $= 0$). Zero of numerator: $x = -\\frac{1}{2}$; zero of denominator: $x = 2$ (excluded). The fraction is negative for $-\\frac{1}{2} \\leq x < 2$, and equals $0$ at $x = -\\frac{1}{2}$. Solution: $\\left[-\\frac{1}{2}, 2\\right)$. [CSCA 1.25 Q12]"
+    correct: 2,
+    explanation: "The empty set $\\emptyset$ is a subset of every set (A is true) and, since $\\{\\emptyset\\}$ is a set containing $\\emptyset$ as its one element, $\\emptyset \\in \\{\\emptyset\\}$ (B is true). By definition $\\emptyset$ has $0$ elements (D is true). However, $\\{0\\}$ is a set containing the number $0$, so it has exactly $1$ element — it is NOT the empty set. Statement C is therefore false. [Sets Lecture — The Empty Set]"
   },
  {
     id: 12,

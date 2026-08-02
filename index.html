@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSCA Mathematics Mock Exam - Analytic Geometry: Ellipses and Parabola</title>
+<title>CSCA Mathematics Mock Exam - Analytic Geometry: Sets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -478,7 +478,7 @@
     <div class="entry-card">
       <div class="entry-mark">CSCA</div>
       <h1>Mathematics Exam</h1>
-      <p class="entry-sub">Topic Assessment: <strong>Analytic Geometry — Ellipses and Parabola</strong></p>
+      <p class="entry-sub">Topic Assessment: <strong>Analytic Geometry — Sets</strong></p>
       
       <form id="entry-form" onsubmit="handleStartExam(event)">
         <div class="field">
@@ -510,7 +510,7 @@
     <header class="exam-header">
       <div class="exam-title">
         CSCA Mathematics Mock Exam
-        <small>Topic: Analytic Geometry (Ellipses and Parabola)</small>
+        <small>Topic: Analytic Geometry (Sets)</small>
       </div>
       <div class="timer-display" id="timer-display">60:00</div>
     </header>
@@ -551,7 +551,7 @@
         </div>
 
         <div class="question-card">
-          <span class="question-topic-tag">Analytic Geometry — Ellipses and Parabola</span>
+          <span class="question-topic-tag">Analytic Geometry — Sets</span>
           <div class="question-text" id="question-text">
             Question text will load here...
           </div>
@@ -616,7 +616,7 @@
   <!-- ============ SCRIPTS ============ -->
   <script>
     /* ==========================================================================
-       1. QUESTION BANK: 25 Analytic Geometry "Ellipses and Parabola" Questions
+       1. QUESTION BANK: 25 Analytic Geometry "Sets" Questions
           Includes questions from Jan, Dec, March, April, June papers & lessons.
        ========================================================================== */
     const questions = [
@@ -752,7 +752,7 @@
     correct: 0,
     explanation: "The fraction is $\\leq 0$ when numerator and denominator have opposite signs (or numerator $= 0$). Zero of numerator: $x = -\\frac{1}{2}$; zero of denominator: $x = 2$ (excluded). The fraction is negative for $-\\frac{1}{2} \\leq x < 2$, and equals $0$ at $x = -\\frac{1}{2}$. Solution: $\\left[-\\frac{1}{2}, 2\\right)$. [CSCA 1.25 Q12]"
   },
-  {
+ {
     id: 12,
     question: "Let $U = \\{1,2,3,4,5,6,7,8\\}$, $A = \\{1,2,3,4\\}$, and $B = \\{3,4,5,6\\}$. Then $A \\setminus B$ (elements in $A$ but not in $B$) equals ( )",
     options: [
@@ -824,6 +824,7 @@
     correct: 1,
     explanation: "First, $A \\cup B$ = all odd numbers $\\cup$ all even numbers $= U = \\{1,2,...,10\\}$ (every integer is either odd or even). Then $(A \\cup B) \\cap C = U \\cap C = C = \\{1,2,3,4,5\\}$. In general, $U \\cap X = X$ for any set $X \\subseteq U$."
   },
+
   {
     id: 18,
     question: "All subsets of the set $\\{a, b\\}$ are ( )",
@@ -921,6 +922,7 @@
     explanation: "A square bracket $[$ means the endpoint IS included ($\\leq$), while a round bracket $)$ means the endpoint is NOT included ($<$). So $[a,b)$ represents $a \\leq x < b$: $x$ can equal $a$ but must be strictly less than $b$. [Sets Lecture — Intervals slide]"
   }
 ];
+
 
     /* ==========================================================================
        2. EXAM STATE MANAGEMENT

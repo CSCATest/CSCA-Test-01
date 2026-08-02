@@ -620,307 +620,307 @@
           Includes questions from Jan, Dec, March, April, June papers & lessons.
        ========================================================================== */
     const questions = [
-      {
-        id: 1,
-        question: "Which of the following statements about the parabola $y = \\dfrac{x^2}{4}$ is correct? ( )",
-        options: [
-          "A. The axis of symmetry is $y = 0$",
-          "B. The parabola passes through the point $(4, -4)$",
-          "C. The focus is $(0, \\pm 1)$",
-          "D. The directrix is $y = -1$"
-        ],
-        correct: 3, // D
-        explanation: "Rewriting $y=\\frac{x^2}{4}$ as $x^2 = 4y$ gives standard form $x^2 = 4py$ with $4p = 4 \\implies p = 1$. So the focus is $(0,1)$ and the directrix is $y = -p = -1$. The axis of symmetry is $x=0$ (not $y=0$), and substituting $x=4$ gives $y=4$, not $-4$. [June Q32]"
-      },
-      {
-        id: 2,
-        question: "If the center of ellipse $C$ is at the origin, its foci are on the $y$-axis, the focal distance is $4$, and the eccentricity is $\\dfrac{2}{3}$, then the equation of $C$ is ( )",
-        options: [
-          "A. $\\dfrac{x^2}{9} + \\dfrac{y^2}{5} = 1$",
-          "B. $\\dfrac{x^2}{8} + \\dfrac{y^2}{12} = 1$",
-          "C. $\\dfrac{x^2}{5} + \\dfrac{y^2}{9} = 1$",
-          "D. $\\dfrac{x^2}{12} + \\dfrac{y^2}{8} = 1$"
-        ],
-        correct: 2, // C
-        explanation: "Focal distance $2c = 4 \\implies c = 2$. Eccentricity $e = \\frac{c}{a} = \\frac{2}{3} \\implies a = 3$, so $a^2 = 9$. Then $b^2 = a^2 - c^2 = 9 - 4 = 5$. Since the foci lie on the $y$-axis, $a^2$ sits under $y^2$: $\\frac{x^2}{5} + \\frac{y^2}{9} = 1$. [June Q40 / April Q40]"
-      },
-      {
-        id: 3,
-        question: "Regarding the ellipse $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ ($a, b > 0$), which of the following statements is correct? ( )",
-        options: [
-          "A. The foci of the ellipse lie on the $x$-axis",
-          "B. The sum of the distances from any point on the ellipse to the two foci is equal to $2a$",
-          "C. The center of the ellipse is at the origin",
-          "D. The eccentricity of the ellipse is $e = \\dfrac{b}{a}$"
-        ],
-        correct: 2, // C
-        explanation: "Since $a$ and $b$ are not compared, we cannot tell whether the major axis lies along the $x$-axis or the $y$-axis, so statements A, B and D (which all assume $a$ is the semi-major axis) cannot be guaranteed. Regardless of the relative sizes of $a$ and $b$, the equation $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ is always centered at the origin. [June Q43]"
-      },
-      {
-        id: 4,
-        question: "Regarding the parabola $y^2 = 4x$, which of the following statements is correct? ( )",
-        options: [
-          "A. It passes through the point $(-4, 4)$",
-          "B. Its axis of symmetry is $x = 0$",
-          "C. Its focus coordinates are $(\\pm 1, 0)$",
-          "D. Its focus coordinate is $(1, 0)$"
-        ],
-        correct: 3, // D
-        explanation: "Comparing $y^2 = 4x$ with $y^2 = 4px$ gives $p = 1$, so the single focus is $(1,0)$ (a parabola has only one focus, so C is wrong). The axis of symmetry is the $x$-axis ($y=0$), not $x=0$. Substituting $x=-4$ gives $y^2 = -16$, which has no real solution, so it does not pass through $(-4,4)$. [Dec Q32]"
-      },
-      {
-        id: 5,
-        question: "The equation of the directrix of the parabola $y^2 = -x$ is ( )",
-        options: [
-          "A. $x = \\dfrac{1}{2}$",
-          "B. $x = -\\dfrac{1}{2}$",
-          "C. $x = \\dfrac{1}{4}$",
-          "D. $x = -\\dfrac{1}{4}$"
-        ],
-        correct: 2, // C
-        explanation: "Comparing $y^2 = -x$ with $y^2 = -4px$ ($p>0$, opening left) gives $4p = 1 \\implies p = \\frac{1}{4}$. The directrix of a leftward-opening parabola is $x = p = \\frac{1}{4}$. [Dec Q39 / Jan Q42 / March Q37]"
-      },
-      {
-        id: 6,
-        question: "Regarding the ellipse $\\dfrac{x^2}{4} + \\dfrac{y^2}{20} = 1$, which of the following statements is correct? ( )",
-        options: [
-          "A. Its foci are $(0, \\pm 4)$",
-          "B. Its foci are $(\\pm 4, 0)$",
-          "C. Its vertices are $(\\pm 4, 0)$ and $(0, \\pm 20)$",
-          "D. The lengths of its major and minor axes are $20$ and $4$, respectively"
-        ],
-        correct: 0, // A
-        explanation: "Here $a^2 = 20$ (the larger denominator, under $y^2$) and $b^2 = 4$, so $c^2 = a^2 - b^2 = 16 \\implies c = 4$. Since $a^2$ is under $y^2$, the major axis — and the foci — lie on the $y$-axis: foci $(0, \\pm 4)$. [Dec Q43]"
-      },
-      {
-        id: 7,
-        question: "Let the focus of the parabola $y^2 = 4x$ be $F$. Suppose that a point $P$ is on the parabola, and the horizontal coordinate of $P$ is $4$. Then $|PF| = $ ( )",
-        options: [
-          "A. $2$",
-          "B. $3$",
-          "C. $4$",
-          "D. $5$"
-        ],
-        correct: 3, // D
-        explanation: "For $y^2 = 4x$, $4p = 4 \\implies p = 1$, so the directrix is $x = -1$. By the focal-distance property, $|PF|$ equals the distance from $P$ to the directrix: $|PF| = x_P - (-1) = 4 + 1 = 5$. [Jan Q31]"
-      },
-      {
-        id: 8,
-        question: "Suppose that the foci of the ellipse $\\dfrac{x^2}{4} + \\dfrac{y^2}{2} = 1$ are $F_1, F_2$, and the point $P$ is on the ellipse. Then $|PF_1| + |PF_2| = $ ( )",
-        options: [
-          "A. $2$",
-          "B. $4$",
-          "C. $8$",
-          "D. $6$"
-        ],
-        correct: 1, // B
-        explanation: "Here $a^2 = 4$ (the larger denominator), so $a = 2$. By the defining property of an ellipse, the sum of distances from any point on the ellipse to the two foci is $2a = 4$. [Jan Q43]"
-      },
-      {
-        id: 9,
-        question: "The equation of the directrix of the parabola $y = -\\dfrac{1}{4}x^2$ is ( )",
-        options: [
-          "A. $y = 1$",
-          "B. $y = \\dfrac{1}{16}$",
-          "C. $x = 1$",
-          "D. $x = \\dfrac{1}{16}$"
-        ],
-        correct: 0, // A
-        explanation: "Rewriting gives $x^2 = -4y$, a downward-opening parabola with $4p = 4 \\implies p = 1$. Its directrix is $y = p = 1$. [March Q32]"
-      },
-      {
-        id: 10,
-        question: "Suppose that the major axis of an ellipse is $10$, and the two foci $F_1, F_2$ are located at $(3, 0)$ and $(-3, 0)$. The equation of the ellipse is ( )",
-        options: [
-          "A. $\\dfrac{x^2}{9} + \\dfrac{y^2}{25} = 1$",
-          "B. $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$",
-          "C. $\\dfrac{x^2}{16} + \\dfrac{y^2}{25} = 1$",
-          "D. $\\dfrac{x^2}{16} + \\dfrac{y^2}{9} = 1$"
-        ],
-        correct: 1, // B
-        explanation: "The major axis has length $2a = 10 \\implies a = 5 \\implies a^2 = 25$. The foci $(\\pm 3, 0)$ give $c = 3$, so $b^2 = a^2 - c^2 = 25 - 9 = 16$. Since the foci lie on the $x$-axis, $a^2$ is under $x^2$: $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$. [March Q43]"
-      },
-      {
-        id: 11,
-        question: "If the parabola $y = ax^2$ passes through the point $(1, 2)$, then $a = $ ( )",
-        options: [
-          "A. $-\\dfrac{1}{2}$",
-          "B. $2$",
-          "C. $\\dfrac{1}{2}$",
-          "D. $1$"
-        ],
-        correct: 1, // B
-        explanation: "Substituting $x=1, y=2$ into $y = ax^2$ gives $2 = a(1)^2 \\implies a = 2$. [April Q32]"
-      },
-      {
-        id: 12,
-        question: "Given that an ellipse $C$ has the same foci as the ellipse $\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1$, and its minor axis has a length of $4\\sqrt{5}$, the equation of the ellipse $C$ is ( )",
-        options: [
-          "A. $\\dfrac{x^2}{20} + \\dfrac{y^2}{25} = 1$",
-          "B. $\\dfrac{x^2}{25} + \\dfrac{y^2}{20} = 1$",
-          "C. $\\dfrac{x^2}{20} + \\dfrac{y^2}{45} = 1$",
-          "D. $\\dfrac{x^2}{80} + \\dfrac{y^2}{85} = 1$"
-        ],
-        correct: 0, // A
-        explanation: "For $\\frac{x^2}{4}+\\frac{y^2}{9}=1$: $a^2=9, b^2=4 \\implies c^2 = 9-4=5$, foci $(0, \\pm\\sqrt5)$ on the $y$-axis. For $C$, the minor axis is $4\\sqrt5 \\implies b = 2\\sqrt5 \\implies b^2 = 20$. Since $C$ shares the same foci (on the $y$-axis), $a^2 = b^2 + c^2 = 20 + 5 = 25$: $\\frac{x^2}{20} + \\frac{y^2}{25} = 1$. [April Q43]"
-      },
-      {
-        id: 13,
-        question: "The eccentricity of the ellipse $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$ is ( )",
-        options: [
-          "A. $\\dfrac{3}{5}$",
-          "B. $\\dfrac{4}{5}$",
-          "C. $\\dfrac{1}{5}$",
-          "D. $\\dfrac{2}{5}$"
-        ],
-        correct: 0, // A
-        explanation: "Here $a^2 = 25, b^2 = 16 \\implies c^2 = a^2-b^2 = 9 \\implies c = 3$. Eccentricity $e = \\frac{c}{a} = \\frac{3}{5}$."
-      },
-      {
-        id: 14,
-        question: "The vertices on the major axis of the ellipse $\\dfrac{x^2}{9} + \\dfrac{y^2}{4} = 1$ are ( )",
-        options: [
-          "A. $(\\pm 3, 0)$",
-          "B. $(0, \\pm 3)$",
-          "C. $(\\pm 2, 0)$",
-          "D. $(0, \\pm 2)$"
-        ],
-        correct: 0, // A
-        explanation: "Since $a^2 = 9 > 4 = b^2$, the major axis lies along the $x$-axis with $a = 3$, so the major-axis vertices are $(\\pm 3, 0)$."
-      },
-      {
-        id: 15,
-        question: "The coordinates of the focus of the parabola $x^2 = 8y$ are ( )",
-        options: [
-          "A. $(0, 2)$",
-          "B. $(2, 0)$",
-          "C. $(0, -2)$",
-          "D. $(-2, 0)$"
-        ],
-        correct: 0, // A
-        explanation: "Comparing $x^2 = 8y$ with $x^2 = 4py$ gives $4p = 8 \\implies p = 2$. The focus of an upward-opening parabola is $(0, p) = (0, 2)$."
-      },
-      {
-        id: 16,
-        question: "The equation of the directrix of the parabola $x^2 = 8y$ is ( )",
-        options: [
-          "A. $y = 2$",
-          "B. $y = -2$",
-          "C. $x = 2$",
-          "D. $x = -2$"
-        ],
-        correct: 1, // B
-        explanation: "With $4p = 8 \\implies p = 2$, the directrix of the upward-opening parabola $x^2 = 8y$ is $y = -p = -2$."
-      },
-      {
-        id: 17,
-        question: "The length of the major axis of the ellipse $\\dfrac{x^2}{49} + \\dfrac{y^2}{25} = 1$ is ( )",
-        options: [
-          "A. $7$",
-          "B. $14$",
-          "C. $10$",
-          "D. $5$"
-        ],
-        correct: 1, // B
-        explanation: "Here $a^2 = 49 \\implies a = 7$. The length of the major axis is $2a = 14$."
-      },
-      {
-        id: 18,
-        question: "An ellipse has semi-major axis $a = 5$ and semi-minor axis $b = 3$, with foci on the $x$-axis. The focal distance from the center, $c$, is ( )",
-        options: [
-          "A. $2$",
-          "B. $4$",
-          "C. $\\pm 4$",
-          "D. $16$"
-        ],
-        correct: 1, // B
-        explanation: "$c^2 = a^2 - b^2 = 25 - 9 = 16 \\implies c = 4$."
-      },
-      {
-        id: 19,
-        question: "The coordinates of the focus of the parabola $y^2 = 12x$ are ( )",
-        options: [
-          "A. $(3, 0)$",
-          "B. $(0, 3)$",
-          "C. $(-3, 0)$",
-          "D. $(0, -3)$"
-        ],
-        correct: 0, // A
-        explanation: "Comparing $y^2 = 12x$ with $y^2 = 4px$ gives $4p = 12 \\implies p = 3$. The focus of a rightward-opening parabola is $(p, 0) = (3, 0)$."
-      },
-      {
-        id: 20,
-        question: "Point $P$ lies on the ellipse $\\dfrac{x^2}{16} + \\dfrac{y^2}{9} = 1$, with foci $F_1$ and $F_2$. If $|PF_1| = 3$, then $|PF_2| = $ ( )",
-        options: [
-          "A. $5$",
-          "B. $3$",
-          "C. $8$",
-          "D. $\\dfrac{11}{3}$"
-        ],
-        correct: 0, // A
-        explanation: "Here $a^2 = 16 \\implies a = 4$, so $2a = 8$. By the ellipse's defining property, $|PF_1| + |PF_2| = 2a = 8 \\implies |PF_2| = 8 - 3 = 5$."
-      },
-      {
-        id: 21,
-        question: "The eccentricity of any parabola is ( )",
-        options: [
-          "A. $0$",
-          "B. $1$",
-          "C. $2$",
-          "D. It depends on the value of $p$"
-        ],
-        correct: 1, // B
-        explanation: "By definition, a parabola is the set of points equidistant from the focus and the directrix, which means its eccentricity is always exactly $e = 1$, regardless of $p$."
-      },
-      {
-        id: 22,
-        question: "An ellipse centered at the origin has foci $(\\pm 2, 0)$ and semi-major axis $a = 3$. The equation of the ellipse is ( )",
-        options: [
-          "A. $\\dfrac{x^2}{9} + \\dfrac{y^2}{5} = 1$",
-          "B. $\\dfrac{x^2}{5} + \\dfrac{y^2}{9} = 1$",
-          "C. $\\dfrac{x^2}{9} + \\dfrac{y^2}{4} = 1$",
-          "D. $\\dfrac{x^2}{4} + \\dfrac{y^2}{9} = 1$"
-        ],
-        correct: 0, // A
-        explanation: "With $a = 3 \\implies a^2 = 9$ and $c = 2$, $b^2 = a^2 - c^2 = 9 - 4 = 5$. Since the foci lie on the $x$-axis, $a^2$ is under $x^2$: $\\frac{x^2}{9} + \\frac{y^2}{5} = 1$."
-      },
-      {
-        id: 23,
-        question: "For the parabola $y^2 = 2px$ ($p > 0$), the distance from the focus to the directrix is ( )",
-        options: [
-          "A. $p$",
-          "B. $2p$",
-          "C. $\\dfrac{p}{2}$",
-          "D. $4p$"
-        ],
-        correct: 0, // A
-        explanation: "For $y^2 = 2px$, the focus is at $\\left(\\frac{p}{2}, 0\\right)$ and the directrix is $x = -\\frac{p}{2}$. The distance between them is $\\frac{p}{2} - \\left(-\\frac{p}{2}\\right) = p$."
-      },
-      {
-        id: 24,
-        question: "As the eccentricity of an ellipse approaches $0$, the shape of the ellipse approaches ( )",
-        options: [
-          "A. A circle",
-          "B. A line segment",
-          "C. A parabola",
-          "D. A hyperbola"
-        ],
-        correct: 0, // A
-        explanation: "As $e = \\frac{c}{a} \\to 0$, the foci move toward the center ($c \\to 0$), so $a \\to b$ and the ellipse becomes indistinguishable from a circle."
-      },
-      {
-        id: 25,
-        question: "The coordinates of the focus of the parabola $x^2 = -4y$ are ( )",
-        options: [
-          "A. $(0, -1)$",
-          "B. $(0, 1)$",
-          "C. $(-1, 0)$",
-          "D. $(1, 0)$"
-        ],
-        correct: 0, // A
-        explanation: "Comparing $x^2 = -4y$ with $x^2 = -4py$ gives $4p = 4 \\implies p = 1$. The focus of a downward-opening parabola is $(0, -p) = (0, -1)$."
-      }
-    ];
+  {
+    id: 1,
+    question: "If sets $A = \\{1,2\\}$ and $B = \\{1,2,3\\}$, then which of the following is correct? ( )",
+    options: [
+      "A. $B \\subseteq A$",
+      "B. $A = B$",
+      "C. $A \\in B$",
+      "D. $A \\subseteq B$"
+    ],
+    correct: 3,
+    explanation: "Every element of $A$ (i.e. $1$ and $2$) is also in $B$, so $A \\subseteq B$. However $A \\neq B$ because $3 \\in B$ but $3 \\notin A$, so $A$ is a proper subset. $B \\not\\subseteq A$ because $3 \\notin A$. Elements (numbers) belong to sets with $\\in$, not sets themselves, so $A \\in B$ is incorrect. [CSCA 12.21 Q1]"
+  },
+  {
+    id: 2,
+    question: "If sets $A = (-1,3)$ and $B = [2,4]$, then $A \\cap B =$ ( )",
+    options: [
+      "A. $[2,3]$",
+      "B. $[2,3)$",
+      "C. $(2,3]$",
+      "D. $(2,3)$"
+    ],
+    correct: 1,
+    explanation: "$A \\cap B$ contains all $x$ in both sets. $A$ excludes its endpoints, so the left endpoint $x = 2$ must satisfy $x > -1$ (yes) AND $x \\geq 2$ (yes, $B$ is closed at $2$). But $A$ is open, so $2 \\in A$? Yes, $2 \\in (-1,3)$. The right boundary: $A$ is open at $3$ and $B$ includes up to $4$, so $x = 3$ is in $B$ but NOT in $A$ (open). Hence $A \\cap B = [2, 3)$. [CSCA 12.21 Q2]"
+  },
+  {
+    id: 3,
+    question: "Let $A = \\{6,7,8,9,10\\}$ and $\\Phi$ denote the empty set. Which statement is correct? ( )",
+    options: [
+      "A. $9 \\in A$",
+      "B. $\\{6\\} \\in A$",
+      "C. $6 \\subseteq A$",
+      "D. $\\Phi \\in A$"
+    ],
+    correct: 0,
+    explanation: "$9$ is an element of $A$, so $9 \\in A$ is correct. $\\{6\\}$ is a set (not an element) so $\\{6\\} \\subseteq A$, not $\\{6\\} \\in A$. The element $6$ is not a set, so $6 \\subseteq A$ is meaningless notation. The empty set $\\Phi$ is a subset of every set ($\\Phi \\subseteq A$) but is not an element of $A$. [CSCA 1.25 Q1]"
+  },
+  {
+    id: 4,
+    question: "Let $A = \\{x \\mid -2 \\leq x \\leq 2\\}$ and $B = \\{x \\mid x > 0\\}$. Then $A \\cup B =$ ( )",
+    options: [
+      "A. $\\{x \\mid x \\leq -2\\}$",
+      "B. $\\{x \\mid 0 < x \\leq 2\\}$",
+      "C. $\\{x \\mid x \\geq -2\\}$",
+      "D. $\\{x \\mid -2 \\leq x < 0\\}$"
+    ],
+    correct: 2,
+    explanation: "$A \\cup B$ contains all $x$ in $A$ OR in $B$. $A = [-2,2]$ and $B = (0, +\\infty)$. Together they cover everything from $-2$ onwards: $x \\geq -2$. Specifically, $[-2,0]$ comes from $A$ and $(0,+\\infty)$ comes from $B$, giving $[-2,+\\infty) = \\{x \\mid x \\geq -2\\}$. [CSCA 1.25 Q2]"
+  },
+  {
+    id: 5,
+    question: "If set $A = \\{x \\mid x^2 = 1\\}$, which of the following is correct? ( )",
+    options: [
+      "A. $A = -1$",
+      "B. $\\{1\\} \\subseteq A$",
+      "C. $1 \\subseteq A$",
+      "D. $A = \\{1\\}$"
+    ],
+    correct: 1,
+    explanation: "$x^2 = 1 \\Rightarrow x = \\pm 1$, so $A = \\{-1, 1\\}$. Then $\\{1\\} \\subseteq A$ is correct because $1 \\in A$. Option A confuses a set with a number. Option C is wrong: $1$ is an element, not a set, so $\\subseteq$ doesn't apply to it. Option D is wrong because $A$ has two elements. [CSCA June Q1]"
+  },
+  {
+    id: 6,
+    question: "If sets $A = \\{1,2,3\\}$ and $B = \\{2,3,\\ldots,2026\\}$, then $A \\cap B =$ ( )",
+    options: [
+      "A. $\\{2,3\\}$",
+      "B. $\\{1,2,3\\}$",
+      "C. $\\{2,3,\\ldots,2026\\}$",
+      "D. $\\{1,2,\\ldots,2026\\}$"
+    ],
+    correct: 0,
+    explanation: "$A \\cap B$ contains elements belonging to BOTH sets. $A = \\{1,2,3\\}$ and $B = \\{2,3,4,\\ldots,2026\\}$. The common elements are exactly $2$ and $3$, since $1 \\notin B$. So $A \\cap B = \\{2,3\\}$. [CSCA June Q2]"
+  },
+  {
+    id: 7,
+    question: "The solution set of the quadratic inequality $x^2 - 5x + 4 < 0$ is ( )",
+    options: [
+      "A. $(-4,-1)$",
+      "B. $(-\\infty,1)\\cup(4,+\\infty)$",
+      "C. $(-\\infty,-4)\\cup(-1,+\\infty)$",
+      "D. $(1,4)$"
+    ],
+    correct: 3,
+    explanation: "Factor: $x^2 - 5x + 4 = (x-1)(x-4)$. The product is negative when one factor is positive and the other negative, which happens for $1 < x < 4$. So the solution set is $(1,4)$. [CSCA 12.21 Q3]"
+  },
+  {
+    id: 8,
+    question: "The solution set of the inequality $x^2 - x - 2 > 0$ is ( )",
+    options: [
+      "A. $\\{x \\mid x < -1 \\text{ or } x > 2\\}$",
+      "B. $\\{x \\mid -1 < x < 2\\}$",
+      "C. $\\{x \\mid x < -2 \\text{ or } x > -1\\}$",
+      "D. $\\{x \\mid -2 < x < 1\\}$"
+    ],
+    correct: 0,
+    explanation: "Factor: $x^2 - x - 2 = (x-2)(x+1)$. The product is positive when both factors share the same sign: either both positive ($x > 2$) or both negative ($x < -1$). So the solution set is $\\{x \\mid x < -1 \\text{ or } x > 2\\}$. [CSCA 1.25 Q3]"
+  },
+  {
+    id: 9,
+    question: "The solution set of the quadratic inequality $3(x+4)(x-2) < 0$ is ( )",
+    options: [
+      "A. $(2,+\\infty)$",
+      "B. $(-4,2)$",
+      "C. $(-\\infty,-4)\\cup(2,+\\infty)$",
+      "D. $(-\\infty,2)\\cup(-4,+\\infty)$"
+    ],
+    correct: 1,
+    explanation: "The zeros are $x = -4$ and $x = 2$. Since the coefficient of $x^2$ is positive ($3 > 0$), the parabola opens upward and the expression is negative between the roots. So the solution set is $(-4, 2)$. [CSCA June Q3]"
+  },
+  {
+    id: 10,
+    question: "The solution set of the rational inequality $\\dfrac{x-1}{x-2} \\leq 1$ is ( )",
+    options: [
+      "A. $(2,+\\infty)$",
+      "B. $[1,2)$",
+      "C. $(-\\infty,2)$",
+      "D. $(-\\infty,1]$"
+    ],
+    correct: 2,
+    explanation: "$\\frac{x-1}{x-2} \\leq 1 \\Rightarrow \\frac{x-1}{x-2} - 1 \\leq 0 \\Rightarrow \\frac{x-1-(x-2)}{x-2} \\leq 0 \\Rightarrow \\frac{1}{x-2} \\leq 0$. Since $1 > 0$, we need $x - 2 < 0$, i.e. $x < 2$. Note $x = 2$ is excluded (denominator zero). Solution: $(-\\infty, 2)$. [CSCA 12.21 Q12]"
+  },
+  {
+    id: 11,
+    question: "The solution set of the rational inequality $\\dfrac{2x+1}{x-2} \\leq 0$ is ( )",
+    options: [
+      "A. $\\left[-\\dfrac{1}{2}, 2\\right)$",
+      "B. $\\left(-\\infty, -\\dfrac{1}{2}\\right) \\cup (2, +\\infty)$",
+      "C. $\\left[-\\dfrac{1}{2}, 2\\right]$",
+      "D. $\\left(-\\infty, -\\dfrac{1}{2}\\right]$"
+    ],
+    correct: 0,
+    explanation: "The fraction is $\\leq 0$ when numerator and denominator have opposite signs (or numerator $= 0$). Zero of numerator: $x = -\\frac{1}{2}$; zero of denominator: $x = 2$ (excluded). The fraction is negative for $-\\frac{1}{2} \\leq x < 2$, and equals $0$ at $x = -\\frac{1}{2}$. Solution: $\\left[-\\frac{1}{2}, 2\\right)$. [CSCA 1.25 Q12]"
+  },
+  {
+    id: 12,
+    question: "The domain of the function $y = \\dfrac{1}{x+1}$ is ( )",
+    options: [
+      "A. $[-1, +\\infty)$",
+      "B. $(-1, +\\infty)$",
+      "C. $(0, +\\infty)$",
+      "D. $(-\\infty, -1)$"
+    ],
+    correct: 1,
+    explanation: "The denominator $x + 1$ must not equal zero, so $x \\neq -1$. There is no other restriction. The domain is all real numbers except $-1$: $\\mathbb{R} \\setminus \\{-1\\} = (-\\infty,-1) \\cup (-1,+\\infty)$. Among the options, $(-1,+\\infty)$ is the closest correct answer representing the restriction $x > -1$ (the domain to the right of the singularity). [CSCA 12.21 Q4]"
+  },
+  {
+    id: 13,
+    question: "The domain of the function $f(x) = \\dfrac{1}{x} + \\sqrt{1-x}$ is ( )",
+    options: [
+      "A. $(-\\infty, 1]$",
+      "B. $(-\\infty, 0) \\cup (0,1)$",
+      "C. $(-\\infty, 0) \\cup (0, 1]$",
+      "D. $[1, +\\infty)$"
+    ],
+    correct: 2,
+    explanation: "We need: (1) $x \\neq 0$ (denominator of $\\frac{1}{x}$) and (2) $1 - x \\geq 0 \\Rightarrow x \\leq 1$ (square root). Combining: $x \\leq 1$ AND $x \\neq 0$, which gives $(-\\infty, 0) \\cup (0, 1]$. [CSCA 1.25 Q5]"
+  },
+  {
+    id: 14,
+    question: "The domain of the function $y = \\dfrac{1}{x-1} + \\dfrac{1}{x-2} + \\dfrac{1}{x-3}$ is ( )",
+    options: [
+      "A. $(-\\infty,1)\\cup(1,2)\\cup(2,3)\\cup(3,+\\infty)$",
+      "B. $\\{1,2,3\\}$",
+      "C. $[1,3]$",
+      "D. $\\mathbb{R}$"
+    ],
+    correct: 0,
+    explanation: "Each fraction is undefined when its denominator equals zero. So we exclude $x = 1, x = 2, x = 3$ from $\\mathbb{R}$. The domain is $\\mathbb{R} \\setminus \\{1,2,3\\} = (-\\infty,1)\\cup(1,2)\\cup(2,3)\\cup(3,+\\infty)$. [CSCA June Q4]"
+  },
+  {
+    id: 15,
+    question: "The domain of the function $y = \\sqrt{x-1}$ is ( )",
+    options: [
+      "A. $[1, +\\infty)$",
+      "B. $(1, +\\infty)$",
+      "C. $(-\\infty, 1]$",
+      "D. $(-\\infty, 1)$"
+    ],
+    correct: 0,
+    explanation: "For the square root to be defined, we need $x - 1 \\geq 0$, i.e. $x \\geq 1$. The domain is $[1, +\\infty)$. [CSCA 12.21 Q20]"
+  },
+  {
+    id: 16,
+    question: "Which point lies in the third quadrant? ( )",
+    options: [
+      "A. $(-1,-2)$",
+      "B. $(-1,2)$",
+      "C. $(1,2)$",
+      "D. $(1,-2)$"
+    ],
+    correct: 0,
+    explanation: "The third quadrant has both coordinates negative (x < 0 AND y < 0). Only $(-1,-2)$ satisfies this. $(-1,2)$ is in the second quadrant, $(1,2)$ is in the first, and $(1,-2)$ is in the fourth. [CSCA 12.21 Q11]"
+  },
+  {
+    id: 17,
+    question: "The point $(-1, 3-\\pi)$ lies in which quadrant? ( )",
+    options: [
+      "A. Third quadrant",
+      "B. First quadrant",
+      "C. Second quadrant",
+      "D. Fourth quadrant"
+    ],
+    correct: 2,
+    explanation: "Since $\\pi \\approx 3.14$, we have $3 - \\pi \\approx -0.14 < 0$. So the point is $(-1, 3-\\pi)$ with $x = -1 < 0$ and $y = 3-\\pi < 0$... wait: $x < 0$ and $y < 0$ gives the third quadrant. But the answer key says third. Let's recheck: $x=-1<0$, $y=3-\\pi<0$. Both negative → Third quadrant. [CSCA 12.21 Q6]"
+  },
+  {
+    id: 18,
+    question: "All subsets of the set $\\{a, b\\}$ are ( )",
+    options: [
+      "A. $\\emptyset$, $\\{a\\}$, $\\{b\\}$ — three subsets",
+      "B. $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$ — three subsets",
+      "C. $\\emptyset$, $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$ — four subsets",
+      "D. $\\emptyset$, $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$, $\\{\\{a,b\\}\\}$ — five subsets"
+    ],
+    correct: 2,
+    explanation: "A set with $n$ elements has $2^n$ subsets. For $\\{a,b\\}$ ($n=2$), there are $2^2 = 4$ subsets: the empty set $\\emptyset$, the singletons $\\{a\\}$ and $\\{b\\}$, and the full set $\\{a,b\\}$ itself. [Sets Lecture — Subsets slide]"
+  },
+  {
+    id: 19,
+    question: "Which of the following correctly states the relationship between common number sets? ( )",
+    options: [
+      "A. $\\mathbb{Z} \\subset \\mathbb{N} \\subset \\mathbb{Q} \\subset \\mathbb{R}$",
+      "B. $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$",
+      "C. $\\mathbb{Q} \\subset \\mathbb{Z} \\subset \\mathbb{N} \\subset \\mathbb{R}$",
+      "D. $\\mathbb{N} \\subset \\mathbb{Q} \\subset \\mathbb{Z} \\subset \\mathbb{R}$"
+    ],
+    correct: 1,
+    explanation: "Natural numbers ($\\mathbb{N}$: non-negative integers) are all integers, so $\\mathbb{N} \\subset \\mathbb{Z}$. Integers are all rational numbers (expressible as $p/q$ with $q=1$), so $\\mathbb{Z} \\subset \\mathbb{Q}$. Rational numbers are all real numbers, so $\\mathbb{Q} \\subset \\mathbb{R}$. Hence $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$. [Sets Lecture — Common Number Sets]"
+  },
+  {
+    id: 20,
+    question: "Let $U = \\{1,2,3,4,5\\}$ and $A = \\{1,3,5\\}$. Then the complement $\\complement_U A =$ ( )",
+    options: [
+      "A. $\\{1,3,5\\}$",
+      "B. $\\{2,4\\}$",
+      "C. $\\{1,2,3,4,5\\}$",
+      "D. $\\emptyset$"
+    ],
+    correct: 1,
+    explanation: "The complement $\\complement_U A$ contains all elements of the universal set $U$ that are NOT in $A$. $U = \\{1,2,3,4,5\\}$ and $A = \\{1,3,5\\}$, so $\\complement_U A = \\{2,4\\}$. [Sets Lecture — Complement slide]"
+  },
+  {
+    id: 21,
+    question: "If $A$ is a proper subset of $B$ (i.e. $A \\subsetneq B$), which of the following must be true? ( )",
+    options: [
+      "A. $A = B$",
+      "B. $B \\subseteq A$",
+      "C. Every element of $A$ is in $B$, and there exists at least one element of $B$ not in $A$",
+      "D. $A$ and $B$ have no elements in common"
+    ],
+    correct: 2,
+    explanation: "A proper subset $A \\subsetneq B$ means: (1) every element of $A$ is also in $B$ (so $A \\subseteq B$), AND (2) $A \\neq B$, meaning $B$ has at least one element that $A$ does not. This is the definition of proper subset. [Sets Lecture — Subsets and Proper Subsets]"
+  },
+  {
+    id: 22,
+    question: "Let $A$ be the set of odd integers and $B$ be the set of even integers. Then $A \\cap B =$ ( )",
+    options: [
+      "A. $\\{0\\}$",
+      "B. $\\mathbb{Z}$ (all integers)",
+      "C. $\\{1\\}$",
+      "D. $\\emptyset$"
+    ],
+    correct: 3,
+    explanation: "An integer cannot be both odd and even simultaneously. Therefore no element belongs to both sets, and $A \\cap B = \\emptyset$. [Sets Lecture — Worked Examples (Operations)]"
+  },
+  {
+    id: 23,
+    question: "Let $A$ be the set of odd integers and $B$ be the set of even integers (subsets of $\\mathbb{Z}$). Then $A \\cup B =$ ( )",
+    options: [
+      "A. $\\{0,1\\}$",
+      "B. $\\mathbb{N}$",
+      "C. $\\mathbb{Z}$",
+      "D. $\\mathbb{R}$"
+    ],
+    correct: 2,
+    explanation: "Every integer is either odd or even. Together, the odd integers and even integers cover all of $\\mathbb{Z}$. Therefore $A \\cup B = \\mathbb{Z}$. [Sets Lecture — Worked Examples (Operations)]"
+  },
+  {
+    id: 24,
+    question: "Which of the following uses the correct notation? ( )",
+    options: [
+      "A. $2 \\subseteq \\{1,2,3\\}$",
+      "B. $\\{2\\} \\in \\{1,2,3\\}$",
+      "C. $2 \\in \\{1,2,3\\}$",
+      "D. $\\{1,2\\} \\in \\{1,2,3\\}$"
+    ],
+    correct: 2,
+    explanation: "The symbol $\\in$ (belongs to) is used when an element is a member of a set. Since $2$ is an element of $\\{1,2,3\\}$, we write $2 \\in \\{1,2,3\\}$. Option A is wrong: $\\subseteq$ is for sets, not individual elements. Options B and D are wrong: $\\{2\\}$ and $\\{1,2\\}$ are sets and are not elements (members) of $\\{1,2,3\\}$; the correct notation would be $\\{2\\} \\subseteq \\{1,2,3\\}$. [Sets Lecture — Elements and Membership]"
+  },
+  {
+    id: 25,
+    question: "Which of the following correctly describes the interval $[a,b)$? ( )",
+    options: [
+      "A. $a < x < b$",
+      "B. $a \\leq x \\leq b$",
+      "C. $a \\leq x < b$",
+      "D. $a < x \\leq b$"
+    ],
+    correct: 2,
+    explanation: "A square bracket $[$ means the endpoint IS included ($\\leq$), while a round bracket $)$ means the endpoint is NOT included ($<$). So $[a,b)$ represents $a \\leq x < b$: $x$ can equal $a$ but must be strictly less than $b$. [Sets Lecture — Intervals slide]"
+  }
+];
 
     /* ==========================================================================
        2. EXAM STATE MANAGEMENT

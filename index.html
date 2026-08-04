@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSCA Mathematics Mock Exam - Mathematics: Inequalities</title>
+<title>CSCA Mathematics Mock Exam - Mathematics: Sets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -478,7 +478,7 @@
     <div class="entry-card">
       <div class="entry-mark">CSCA</div>
       <h1>Mathematics Exam</h1>
-      <p class="entry-sub">Topic Assessment: <strong>Mathematics — Inequalities</strong></p>
+      <p class="entry-sub">Topic Assessment: <strong>Mathematics — Sets</strong></p>
       
       <form id="entry-form" onsubmit="handleStartExam(event)">
         <div class="field">
@@ -510,9 +510,9 @@
     <header class="exam-header">
       <div class="exam-title">
         CSCA Mathematics Mock Exam
-        <small>Topic: Mathematics (Inequalities)</small>
+        <small>Topic: Mathematics (Sets)</small>
       </div>
-      <div class="timer-display" id="timer-display">45:00</div>
+      <div class="timer-display" id="timer-display">60:00</div>
     </header>
 
     <main class="exam-body">
@@ -551,7 +551,7 @@
         </div>
 
         <div class="question-card">
-          <span class="question-topic-tag">Mathematics — Inequalities</span>
+          <span class="question-topic-tag">Mathematics — Sets</span>
           <div class="question-text" id="question-text">
             Question text will load here...
           </div>
@@ -616,309 +616,310 @@
   <!-- ============ SCRIPTS ============ -->
   <script>
     /* ==========================================================================
-       1. QUESTION BANK: 25 Mathematics "Inequalities" Questions
-          Referenced from 12.21, 6.27, 1.25 past papers & CSCA syllabus.
+       1. QUESTION BANK: 25 Mathematics "Sets" Questions
+          Includes questions from Jan, Dec, March, April, June papers & lessons.
        ========================================================================== */
     const questions = [
   {
     id: 1,
-    question: "The solution set of the quadratic inequality $x^2 - 5x + 4 < 0$ is ( )",
+    question: "If sets $A = \\{1,2\\}$ and $B = \\{1,2,3\\}$, then which of the following is correct? ( )",
     options: [
-      "A. $(-4,-1)$",
-      "B. $(-\\infty,1) \\cup (4,+\\infty)$",
-      "C. $(-\\infty,-4) \\cup (-1,+\\infty)$",
-      "D. $(1,4)$"
+      "A. $B \\subseteq A$",
+      "B. $A = B$",
+      "C. $A \\in B$",
+      "D. $A \\subseteq B$"
     ],
     correct: 3,
-    explanation: "Factoring the quadratic gives $(x - 1)(x - 4) < 0$. The roots are $x = 1$ and $x = 4$. Since the parabola opens upward, the expression is strictly negative between the roots, yielding $1 < x < 4$, or $(1,4)$[cite: 3]."
+    explanation: "Every element of $A$ (i.e. $1$ and $2$) is also in $B$, so $A \\subseteq B$. However $A \\neq B$ because $3 \\in B$ but $3 \\notin A$, so $A$ is a proper subset. $B \\not\\subseteq A$ because $3 \\notin A$. Elements (numbers) belong to sets with $\\in$, not sets themselves, so $A \\in B$ is incorrect. [CSCA 12.21 Q1]"
   },
   {
     id: 2,
-    question: "The solution set of the rational inequality $\\frac{x-1}{x-2} \\le 1$ is ( )",
+    question: "If sets $A = (-1,3)$ and $B = [2,4]$, then $A \\cap B =$ ( )",
     options: [
-      "A. $(2,+\\infty)$",
-      "B. $[1,2)$",
-      "C. $(-\\infty,2)$",
-      "D. $(-\\infty,1]$"
+      "A. $[2,3]$",
+      "B. $[2,3)$",
+      "C. $(2,3]$",
+      "D. $(2,3)$"
     ],
-    correct: 2,
-    explanation: "Subtract $1$ from both sides: $\\frac{x-1}{x-2} - 1 \\le 0 \\implies \\frac{x-1-(x-2)}{x-2} \\le 0 \\implies \\frac{1}{x-2} \\le 0$. Since the numerator $1 > 0$, the denominator $x-2$ must be strictly negative, so $x - 2 < 0 \\implies x < 2$, giving $(-\\infty,2)$[cite: 3]."
+    correct: 1,
+    explanation: "$A \\cap B$ contains all $x$ in both sets. $A$ excludes its endpoints, so the left endpoint $x = 2$ must satisfy $x > -1$ (yes) AND $x \\geq 2$ (yes, $B$ is closed at $2$). But $A$ is open, so $2 \\in A$? Yes, $2 \\in (-1,3)$. The right boundary: $A$ is open at $3$ and $B$ includes up to $4$, so $x = 3$ is in $B$ but NOT in $A$ (open). Hence $A \\cap B = [2, 3)$. [CSCA 12.21 Q2]"
   },
   {
     id: 3,
-    question: "Given $a > b$, which of the following inequalities is always correct? ( )",
+    question: "Let $A = \\{6,7,8,9,10\\}$ and $\\Phi$ denote the empty set. Which statement is correct? ( )",
     options: [
-      "A. $\\frac{1}{a} < \\frac{1}{b}$",
-      "B. $a^2 > b^2$",
-      "C. $5^a > 5^b$",
-      "D. $\\sin a > \\sin b$"
+      "A. $9 \\in A$",
+      "B. $\\{6\\} \\in A$",
+      "C. $6 \\subseteq A$",
+      "D. $\\Phi \\in A$"
     ],
-    correct: 2,
-    explanation: "Option C is correct because $f(x) = 5^x$ is strictly increasing on $\\mathbb{R}$ (base $5 > 1$). Hence $a > b \\implies 5^a > 5^b$. Option A fails when $a$ and $b$ have opposite signs; Option B fails for negative numbers (e.g. $-1 > -2$ but $(-1)^2 < (-2)^2$); Option D fails due to periodicity[cite: 3]."
+    correct: 0,
+    explanation: "$9$ is an element of $A$, so $9 \\in A$ is correct. $\\{6\\}$ is a set (not an element) so $\\{6\\} \\subseteq A$, not $\\{6\\} \\in A$. The element $6$ is not a set, so $6 \\subseteq A$ is meaningless notation. The empty set $\\Phi$ is a subset of every set ($\\Phi \\subseteq A$) but is not an element of $A$. [CSCA 1.25 Q1]"
   },
   {
     id: 4,
-    question: "Given $a > b$ and $c \\in \\mathbb{R}$, which of the following inequalities MUST hold? ( )",
+    question: "Let $A = \\{x \\mid -2 \\leq x \\leq 2\\}$ and $B = \\{x \\mid x > 0\\}$. Then $A \\cup B =$ ( )",
     options: [
-      "A. $a^2 > b^2$",
-      "B. $ac > bc$",
-      "C. $a + c > b + c$",
-      "D. $|a| > |b|$"
+      "A. $\\{x \\mid x \\leq -2\\}$",
+      "B. $\\{x \\mid 0 < x \\leq 2\\}$",
+      "C. $\\{x \\mid x \\geq -2\\}$",
+      "D. $\\{x \\mid -2 \\leq x < 0\\}$"
     ],
     correct: 2,
-    explanation: "Adding any real number $c$ to both sides of an inequality preserves the inequality sign, so $a + c > b + c$ is always true[cite: 4]. Option B fails if $c \\le 0$. Options A and D fail for negative numbers."
+    explanation: "$A \\cup B$ contains all $x$ in $A$ OR in $B$. $A = [-2,2]$ and $B = (0, +\\infty)$. Together they cover everything from $-2$ onwards: $x \\geq -2$. Specifically, $[-2,0]$ comes from $A$ and $(0,+\\infty)$ comes from $B$, giving $[-2,+\\infty) = \\{x \\mid x \\geq -2\\}$. [CSCA 1.25 Q2]"
   },
   {
     id: 5,
-    question: "The solution set of the quadratic inequality $3(x + 4)(x - 2) < 0$ is ( )",
+    question: "If set $A = \\{x \\mid x^2 = 1\\}$, which of the following is correct? ( )",
     options: [
-      "A. $(2, +\\infty)$",
-      "B. $(-4, 2)$",
-      "C. $(-\\infty, -4) \\cup (2, +\\infty)$",
-      "D. $(-\\infty, 2) \\cup (-4, +\\infty)$"
+      "A. $A = -1$",
+      "B. $\\{1\\} \\subseteq A$",
+      "C. $1 \\subseteq A$",
+      "D. $A = \\{1\\}$"
     ],
     correct: 1,
-    explanation: "Divide both sides by 3 to get $(x + 4)(x - 2) < 0$. The roots are $x = -4$ and $x = 2$. The expression is negative between the roots, so the solution is $(-4, 2)$[cite: 4]."
+    explanation: "$x^2 = 1 \\Rightarrow x = \\pm 1$, so $A = \\{-1, 1\\}$. Then $\\{1\\} \\subseteq A$ is correct because $1 \\in A$. Option A confuses a set with a number. Option C is wrong: $1$ is an element, not a set, so $\\subseteq$ doesn't apply to it. Option D is wrong because $A$ has two elements. [CSCA June Q1]"
   },
   {
     id: 6,
-    question: "The solution set of the rational inequality $\\frac{2}{x - 2} \\le 0$ is ( )",
+    question: "If sets $A = \\{1,2,3\\}$ and $B = \\{2,3,\\ldots,2026\\}$, then $A \\cap B =$ ( )",
     options: [
-      "A. $(-\\infty, 2)$",
-      "B. $(2, +\\infty)$",
-      "C. $[0, 2]$",
-      "D. $(-\\infty, 2]$"
+      "A. $\\{2,3\\}$",
+      "B. $\\{1,2,3\\}$",
+      "C. $\\{2,3,\\ldots,2026\\}$",
+      "D. $\\{1,2,\\ldots,2026\\}$"
     ],
     correct: 0,
-    explanation: "Since the numerator $2 > 0$, the fraction $\\frac{2}{x-2}$ is negative when $x - 2 < 0 \\implies x < 2$. Thus, the solution set is $(-\\infty, 2)$. $x = 2$ is excluded because division by zero is undefined[cite: 4]."
+    explanation: "$A \\cap B$ contains elements belonging to BOTH sets. $A = \\{1,2,3\\}$ and $B = \\{2,3,4,\\ldots,2026\\}$. The common elements are exactly $2$ and $3$, since $1 \\notin B$. So $A \\cap B = \\{2,3\\}$. [CSCA June Q2]"
   },
   {
     id: 7,
-    question: "The solution set of the inequality $x^2 - x - 2 > 0$ is ( )",
+    question: "Let $A = \\{1,2,3\\}$. How many proper subsets does $A$ have? ( )",
     options: [
-      "A. $\\{x \\mid x < -1 \\text{ or } x > 2\\}$",
-      "B. $\\{x \\mid -1 < x < 2\\}$",
-      "C. $\\{x \\mid x < -2 \\text{ or } x > -1\\}$",
-      "D. $\\{x \\mid -2 < x < 1\\}$"
+      "A. $3$",
+      "B. $6$",
+      "C. $7$",
+      "D. $8$"
     ],
-    correct: 0,
-    explanation: "Factoring gives $(x - 2)(x + 1) > 0$. The roots are $x = -1$ and $x = 2$. The product is strictly positive outside the roots, so $x < -1$ or $x > 2$[cite: 5]."
+    correct: 2,
+    explanation: "A set with $n$ elements has $2^n$ subsets in total. For $A = \\{1,2,3\\}$ ($n=3$), there are $2^3 = 8$ subsets. A proper subset excludes the set itself, so the number of proper subsets is $2^n - 1 = 8 - 1 = 7$. [Sets Lecture — Subsets and Proper Subsets]"
   },
   {
     id: 8,
-    question: "Which of the following inequalities is correct? ( )",
+    question: "Let $A = \\{1,2\\}$ and $B = \\{x,y\\}$. Then the Cartesian product $A \\times B =$ ( )",
     options: [
-      "A. $0.75^{-0.2} > 0.75^{-0.4}$",
-      "B. $3^{4.5} > 3^5$",
-      "C. $2.1^{-2} > 1.2^{-2}$",
-      "D. $2.1^{2/3} > 1.2^{2/3}$"
+      "A. $\\{(1,x),(1,y),(2,x),(2,y)\\}$",
+      "B. $\\{(x,1),(y,1),(x,2),(y,2)\\}$",
+      "C. $\\{1,2,x,y\\}$",
+      "D. $\\{(1,2),(x,y)\\}$"
     ],
-    correct: 3,
-    explanation: "The power function $f(x) = x^{2/3}$ with positive exponent $2/3$ is strictly increasing for $x > 0$. Since $2.1 > 1.2$, $2.1^{2/3} > 1.2^{2/3}$ is correct[cite: 3]. Option A is wrong as base $0.75 < 1$ decreases. Option B is wrong as $3^x$ increases and $4.5 < 5$."
+    correct: 0,
+    explanation: "The Cartesian product $A \\times B$ consists of all ordered pairs $(a,b)$ with $a \\in A$ and $b \\in B$, listed with the first coordinate from $A$ and the second from $B$. Pairing each element of $A = \\{1,2\\}$ with each element of $B = \\{x,y\\}$ gives $\\{(1,x),(1,y),(2,x),(2,y)\\}$. [Sets Lecture — Cartesian Product]"
   },
   {
     id: 9,
-    question: "The solution set of the absolute value inequality $|x - 3| < 2$ is ( )",
+    question: "Let $A = \\{1,2,3,4\\}$ and $B = \\{3,4,5,6\\}$. The symmetric difference $A \\bigtriangleup B$ (elements in exactly one of the two sets) equals ( )",
     options: [
-      "A. $(1, 5)$",
-      "B. $(-\\infty, 1) \\cup (5, +\\infty)$",
-      "C. $[-1, 5]$",
-      "D. $(3, 5)$"
+      "A. $\\{3,4\\}$",
+      "B. $\\{1,2,5,6\\}$",
+      "C. $\\{1,2,3,4,5,6\\}$",
+      "D. $\\emptyset$"
     ],
-    correct: 0,
-    explanation: "$|x - 3| < 2 \\iff -2 < x - 3 < 2$. Adding $3$ to all parts gives $1 < x < 5$, which corresponds to the open interval $(1, 5)$."
+    correct: 1,
+    explanation: "The symmetric difference $A \\bigtriangleup B = (A \\setminus B) \\cup (B \\setminus A)$ contains elements belonging to exactly one of the sets, excluding the shared elements. Here $A \\setminus B = \\{1,2\\}$ and $B \\setminus A = \\{5,6\\}$, so $A \\bigtriangleup B = \\{1,2,5,6\\}$. The shared elements $3$ and $4$ are excluded since they appear in both sets. [Sets Lecture — Symmetric Difference]"
   },
   {
     id: 10,
-    question: "The solution set of the absolute value inequality $|2x + 1| \\ge 5$ is ( )",
+    question: "Which set-builder notation correctly represents \"the set of all even integers greater than $10$\"? ( )",
     options: [
-      "A. $[-3, 2]$",
-      "B. $(-\\infty, -3] \\cup [2, +\\infty)$",
-      "C. $(-\\infty, -2] \\cup [3, +\\infty)$",
-      "D. $(2, +\\infty)$"
+      "A. $\\{x \\mid x \\in \\mathbb{Z}, x > 10\\}$",
+      "B. $\\{x \\mid x \\in \\mathbb{Z}, x \\text{ is even}\\}$",
+      "C. $\\{x \\mid x \\in \\mathbb{Z}, x > 10 \\text{ and } x \\text{ is even}\\}$",
+      "D. $\\{x \\mid x \\text{ is even and } x < 10\\}$"
     ],
-    correct: 1,
-    explanation: "$|2x + 1| \\ge 5$ splits into $2x + 1 \\le -5$ or $2x + 1 \\ge 5$. Solving gives $2x \\le -6 \\implies x \\le -3$, or $2x \\ge 4 \\implies x \\ge 2$. Combined interval: $(-\\infty, -3] \\cup [2, +\\infty)$."
+    correct: 2,
+    explanation: "Set-builder notation must capture every condition stated in words. \"Even integers greater than $10$\" requires both conditions at once: $x$ is an integer, $x > 10$, AND $x$ is even. Option A omits the evenness condition, Option B omits the size condition, and Option D reverses the inequality. Only Option C states all conditions correctly. [Sets Lecture — Set-Builder Notation]"
   },
   {
     id: 11,
-    question: "If $\\log_a x > \\log_a x^2$ for $a > 1$, then $x$ must satisfy ( )",
+    question: "Which of the following statements about the empty set $\\emptyset$ is FALSE? ( )",
     options: [
-      "A. $x > 1$",
-      "B. $0 < x < 1$",
-      "C. $x < 0$",
-      "D. $x > 2$"
+      "A. $\\emptyset \\subseteq A$ for any set $A$",
+      "B. $\\emptyset \\in \\{\\emptyset\\}$",
+      "C. $\\emptyset = \\{0\\}$",
+      "D. $\\emptyset$ has $0$ elements"
     ],
-    correct: 1,
-    explanation: "Because base $a > 1$, $y = \\log_a t$ is strictly increasing[cite: 4]. Therefore $\\log_a x > \\log_a x^2 \\implies x > x^2$. Accounting for domain $x > 0$, we get $x(1 - x) > 0 \\implies 0 < x < 1$[cite: 4]."
+    correct: 2,
+    explanation: "The empty set $\\emptyset$ is a subset of every set (A is true) and, since $\\{\\emptyset\\}$ is a set containing $\\emptyset$ as its one element, $\\emptyset \\in \\{\\emptyset\\}$ (B is true). By definition $\\emptyset$ has $0$ elements (D is true). However, $\\{0\\}$ is a set containing the number $0$, so it has exactly $1$ element — it is NOT the empty set. Statement C is therefore false. [Sets Lecture — The Empty Set]"
   },
-  {
+ {
     id: 12,
-    question: "The solution set of the system of inequalities $\\begin{cases} 2x - 1 > 3 \\\\ 5 - x \\ge 1 \\end{cases}$ is ( )",
+    question: "Let $U = \\{1,2,3,4,5,6,7,8\\}$, $A = \\{1,2,3,4\\}$, and $B = \\{3,4,5,6\\}$. Then $A \\setminus B$ (elements in $A$ but not in $B$) equals ( )",
     options: [
-      "A. $(2, 4]$",
-      "B. $[2, 4)$",
-      "C. $(-\\infty, 2) \\cup [4, +\\infty)$",
-      "D. $(2, 4)$"
+      "A. $\\{3,4\\}$",
+      "B. $\\{5,6\\}$",
+      "C. $\\{1,2\\}$",
+      "D. $\\{1,2,5,6\\}$"
     ],
-    correct: 0,
-    explanation: "From $2x - 1 > 3 \\implies 2x > 4 \\implies x > 2$. From $5 - x \\ge 1 \\implies x \\le 4$. Taking the intersection yields $2 < x \\le 4$, which is $(2, 4]$."
+    correct: 2,
+    explanation: "The set difference $A \\setminus B$ (also written $A - B$) contains elements that are in $A$ but NOT in $B$. $A = \\{1,2,3,4\\}$ and $B = \\{3,4,5,6\\}$. The elements $3$ and $4$ are in both sets, so we remove them from $A$. What remains is $\\{1,2\\}$."
   },
   {
     id: 13,
-    question: "For any real number $a > 0$, the minimum value of $a + \\frac{4}{a}$ is ( )",
+    question: "Let $U = \\{1,2,3,4,5,6,7,8\\}$, $A = \\{1,2,3,4\\}$, and $B = \\{3,4,5,6\\}$. The region that belongs to $A$ only (i.e. $A \\cap \\complement_U B$) equals ( )",
     options: [
-      "A. $2$",
-      "B. $4$",
-      "C. $8$",
-      "D. $16$"
+      "A. $\\{3,4\\}$",
+      "B. $\\{1,2\\}$",
+      "C. $\\{5,6\\}$",
+      "D. $\\{7,8\\}$"
     ],
     correct: 1,
-    explanation: "By the AM-GM inequality, $a + \\frac{4}{a} \\ge 2\\sqrt{a \\cdot \\frac{4}{a}} = 2\\sqrt{4} = 4$. Equality holds when $a = \\frac{4}{a} \\implies a = 2$."
+    explanation: "$\\complement_U B = U \\setminus B = \\{1,2,7,8\\}$ (everything in $U$ not in $B$). Then $A \\cap \\complement_U B = \\{1,2,3,4\\} \\cap \\{1,2,7,8\\} = \\{1,2\\}$. This is the 'A only' region of the Venn diagram — inside $A$ but outside $B$. It equals $A \\setminus B$."
   },
   {
     id: 14,
-    question: "If the solution set of the quadratic inequality $x^2 + bx + c < 0$ is $(2, 5)$, then $b + c =$ ( )",
+    question: "Let $U = \\{1,2,3,4,5,6,7,8\\}$, $A = \\{1,2,3,4\\}$, $B = \\{3,4,5,6\\}$. The shaded region outside both circles (neither $A$ nor $B$) equals ( )",
     options: [
-      "A. $3$",
-      "B. $-3$",
-      "C. $7$",
-      "D. $10$"
+      "A. $\\{3,4\\}$",
+      "B. $\\{1,2,5,6\\}$",
+      "C. $\\{7,8\\}$",
+      "D. $\\{1,2,3,4,5,6\\}$"
     ],
-    correct: 0,
-    explanation: "The roots of $x^2 + bx + c = 0$ are $x = 2$ and $x = 5$. By Vieta's formulas, $b = -(2 + 5) = -7$ and $c = 2 \\times 5 = 10$. Thus $b + c = -7 + 10 = 3$."
+    correct: 2,
+    explanation: "The region outside both $A$ and $B$ is $\\complement_U(A \\cup B)$. First, $A \\cup B = \\{1,2,3,4,5,6\\}$. Then $\\complement_U(A \\cup B) = U \\setminus \\{1,2,3,4,5,6\\} = \\{7,8\\}$. This is also equal to $\\complement_U A \\cap \\complement_U B$ (De Morgan's law)."
   },
   {
     id: 15,
-    question: "The solution set of $(x - 1)(x - 3) \\le 0$ is ( )",
+    question: "In a class of 40 students, 25 study Maths ($M$), 20 study Physics ($P$), and 10 study both. Using sets, how many students study neither? ( )",
     options: [
-      "A. $[1, 3]$",
-      "B. $(1, 3)$",
-      "C. $(-\\infty, 1] \\cup [3, +\\infty)$",
-      "D. $(-\\infty, 1)$"
+      "A. $15$",
+      "B. $5$",
+      "C. $10$",
+      "D. $35$"
     ],
-    correct: 0,
-    explanation: "The quadratic expression $(x - 1)(x - 3)$ is non-positive ($\le 0$) between and including its roots $x = 1$ and $x = 3$. Hence $x \\in [1, 3]$."
+    correct: 1,
+    explanation: "By the inclusion-exclusion principle: $|M \\cup P| = |M| + |P| - |M \\cap P| = 25 + 20 - 10 = 35$. This is the number of students in at least one subject. The number in neither is $40 - |M \\cup P| = 40 - 35 = 5$. In set notation, the 'neither' group is $\\complement_U(M \\cup P)$."
   },
   {
     id: 16,
-    question: "The solution set of the rational inequality $\\frac{x + 1}{x - 3} > 0$ is ( )",
+    question: "Let $U = \\{a,b,c,d,e,f\\}$, $A = \\{a,b,c,d\\}$, $B = \\{c,d,e\\}$, $C = \\{b,d,e,f\\}$. Then $A \\cap B \\cap C =$ ( )",
     options: [
-      "A. $(-1, 3)$",
-      "B. $(-\\infty, -1) \\cup (3, +\\infty)$",
-      "C. $(-\\infty, -1] \\cup [3, +\\infty)$",
-      "D. $[-1, 3)$"
+      "A. $\\{b,c,d,e\\}$",
+      "B. $\\{d\\}$",
+      "C. $\\{c,d\\}$",
+      "D. $\\emptyset$"
     ],
     correct: 1,
-    explanation: "$\\frac{x + 1}{x - 3} > 0$ has the same sign distribution as $(x + 1)(x - 3) > 0$. The roots are $x = -1$ and $x = 3$. It is positive strictly outside the roots: $x < -1$ or $x > 3$."
+    explanation: "$A \\cap B \\cap C$ contains only elements present in ALL three sets. Check each element: $a$: only in $A$. $b$: in $A$ and $C$, not $B$. $c$: in $A$ and $B$, not $C$. $d$: in $A$ ✓, $B$ ✓, $C$ ✓. $e$: in $B$ and $C$, not $A$. $f$: only in $C$. So $A \\cap B \\cap C = \\{d\\}$."
   },
   {
     id: 17,
-    question: "The solution set of the rational inequality $\\frac{x}{x + 2} \\ge 0$ is ( )",
+    question: "Let $U = \\{1,2,3,4,5,6,7,8,9,10\\}$, $A = \\{1,3,5,7,9\\}$ (odd numbers), $B = \\{2,4,6,8,10\\}$ (even numbers), $C = \\{1,2,3,4,5\\}$. Then $(A \\cup B) \\cap C =$ ( )",
     options: [
-      "A. $(-\\infty, -2) \\cup [0, +\\infty)$",
-      "B. $(-\\infty, -2] \\cup [0, +\\infty)$",
-      "C. $(-2, 0]$",
-      "D. $[-2, 0]$"
+      "A. $\\emptyset$",
+      "B. $\\{1,2,3,4,5\\}$",
+      "C. $\\{1,3,5\\}$",
+      "D. $U$"
     ],
-    correct: 0,
-    explanation: "The expression is $\\ge 0$ when $x \\le -2$ or $x \\ge 0$. However, $x = -2$ makes the denominator zero and must be excluded. Thus $x \\in (-\\infty, -2) \\cup [0, +\\infty)$."
+    correct: 1,
+    explanation: "First, $A \\cup B$ = all odd numbers $\\cup$ all even numbers $= U = \\{1,2,...,10\\}$ (every integer is either odd or even). Then $(A \\cup B) \\cap C = U \\cap C = C = \\{1,2,3,4,5\\}$. In general, $U \\cap X = X$ for any set $X \\subseteq U$."
   },
+
   {
     id: 18,
-    question: "The solution set of the inequality $|x| \\le 3$ is ( )",
+    question: "All subsets of the set $\\{a, b\\}$ are ( )",
     options: [
-      "A. $[-3, 3]$",
-      "B. $(-3, 3)$",
-      "C. $(-\\infty, -3] \\cup [3, +\\infty)$",
-      "D. $[0, 3]$"
+      "A. $\\emptyset$, $\\{a\\}$, $\\{b\\}$ — three subsets",
+      "B. $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$ — three subsets",
+      "C. $\\emptyset$, $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$ — four subsets",
+      "D. $\\emptyset$, $\\{a\\}$, $\\{b\\}$, $\\{a,b\\}$, $\\{\\{a,b\\}\\}$ — five subsets"
     ],
-    correct: 0,
-    explanation: "By the definition of absolute value, $|x| \\le 3 \\iff -3 \\le x \\le 3$, which represents the closed interval $[-3, 3]$."
+    correct: 2,
+    explanation: "A set with $n$ elements has $2^n$ subsets. For $\\{a,b\\}$ ($n=2$), there are $2^2 = 4$ subsets: the empty set $\\emptyset$, the singletons $\\{a\\}$ and $\\{b\\}$, and the full set $\\{a,b\\}$ itself. [Sets Lecture — Subsets slide]"
   },
   {
     id: 19,
-    question: "For any real numbers $a$ and $b$, which of the following triangle inequalities ALWAYS holds true? ( )",
+    question: "Which of the following correctly states the relationship between common number sets? ( )",
     options: [
-      "A. $|a + b| \\le |a| + |b|$",
-      "B. $|a - b| \\le |a| - |b|$",
-      "C. $|a + b| \\ge |a| + |b|$",
-      "D. $|ab| \\ge |a| + |b|$"
+      "A. $\\mathbb{Z} \\subset \\mathbb{N} \\subset \\mathbb{Q} \\subset \\mathbb{R}$",
+      "B. $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$",
+      "C. $\\mathbb{Q} \\subset \\mathbb{Z} \\subset \\mathbb{N} \\subset \\mathbb{R}$",
+      "D. $\\mathbb{N} \\subset \\mathbb{Q} \\subset \\mathbb{Z} \\subset \\mathbb{R}$"
     ],
-    correct: 0,
-    explanation: "The standard Triangle Inequality for real numbers states that $|a + b| \\le |a| + |b|$ for all $a, b \\in \\mathbb{R}$."
+    correct: 1,
+    explanation: "Natural numbers ($\\mathbb{N}$: non-negative integers) are all integers, so $\\mathbb{N} \\subset \\mathbb{Z}$. Integers are all rational numbers (expressible as $p/q$ with $q=1$), so $\\mathbb{Z} \\subset \\mathbb{Q}$. Rational numbers are all real numbers, so $\\mathbb{Q} \\subset \\mathbb{R}$. Hence $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$. [Sets Lecture — Common Number Sets]"
   },
   {
     id: 20,
-    question: "If $-3x + 6 > 0$, then $x$ satisfies ( )",
+    question: "Let $U = \\{1,2,3,4,5\\}$ and $A = \\{1,3,5\\}$. Then the complement $\\complement_U A =$ ( )",
     options: [
-      "A. $x > 2$",
-      "B. $x < 2$",
-      "C. $x > -2$",
-      "D. $x < -2$"
+      "A. $\\{1,3,5\\}$",
+      "B. $\\{2,4\\}$",
+      "C. $\\{1,2,3,4,5\\}$",
+      "D. $\\emptyset$"
     ],
     correct: 1,
-    explanation: "Subtract $6$ from both sides: $-3x > -6$. Dividing both sides by $-3$ flips the inequality sign: $x < 2$."
+    explanation: "The complement $\\complement_U A$ contains all elements of the universal set $U$ that are NOT in $A$. $U = \\{1,2,3,4,5\\}$ and $A = \\{1,3,5\\}$, so $\\complement_U A = \\{2,4\\}$. [Sets Lecture — Complement slide]"
   },
   {
     id: 21,
-    question: "The quadratic inequality $x^2 - 2x + k > 0$ holds for ALL real numbers $x$ if and only if ( )",
+    question: "If $A$ is a proper subset of $B$ (i.e. $A \\subsetneq B$), which of the following must be true? ( )",
     options: [
-      "A. $k > 1$",
-      "B. $k \\ge 1$",
-      "C. $k < 1$",
-      "D. $k > 4$"
+      "A. $A = B$",
+      "B. $B \\subseteq A$",
+      "C. Every element of $A$ is in $B$, and there exists at least one element of $B$ not in $A$",
+      "D. $A$ and $B$ have no elements in common"
     ],
-    correct: 0,
-    explanation: "For an upward-opening parabola to be strictly positive everywhere, its discriminant must be negative: $\\Delta = (-2)^2 - 4(1)(k) < 0 \\implies 4 - 4k < 0 \\implies k > 1$."
+    correct: 2,
+    explanation: "A proper subset $A \\subsetneq B$ means: (1) every element of $A$ is also in $B$ (so $A \\subseteq B$), AND (2) $A \\neq B$, meaning $B$ has at least one element that $A$ does not. This is the definition of proper subset. [Sets Lecture — Subsets and Proper Subsets]"
   },
   {
     id: 22,
-    question: "Which of the following logarithmic inequalities is correct? ( )",
+    question: "Let $A$ be the set of odd integers and $B$ be the set of even integers. Then $A \\cap B =$ ( )",
     options: [
-      "A. $\\log_2 3 > \\log_2 5$",
-      "B. $\\log_{0.5} 3 > \\log_{0.5} 5$",
-      "C. $\\log_2 4 < \\log_2 2$",
-      "D. \\log_{0.2} 1 > 0"
+      "A. $\\{0\\}$",
+      "B. $\\mathbb{Z}$ (all integers)",
+      "C. $\\{1\\}$",
+      "D. $\\emptyset$"
     ],
-    correct: 1,
-    explanation: "Base $0.5 \\in (0, 1)$, so $y = \\log_{0.5} x$ is strictly decreasing. Since $3 < 5$, reversing the inequality gives $\\log_{0.5} 3 > \\log_{0.5} 5$[cite: 4]."
+    correct: 3,
+    explanation: "An integer cannot be both odd and even simultaneously. Therefore no element belongs to both sets, and $A \\cap B = \\emptyset$. [Sets Lecture — Worked Examples (Operations)]"
   },
   {
     id: 23,
-    question: "The solution set of the exponential inequality $2^{x - 1} > 8$ is ( )",
+    question: "Let $A$ be the set of odd integers and $B$ be the set of even integers (subsets of $\\mathbb{Z}$). Then $A \\cup B =$ ( )",
     options: [
-      "A. $(4, +\\infty)$",
-      "B. $(3, +\\infty)$",
-      "C. $(2, +\\infty)$",
-      "D. $(-\\infty, 4)$"
+      "A. $\\{0,1\\}$",
+      "B. $\\mathbb{N}$",
+      "C. $\\mathbb{Z}$",
+      "D. $\\mathbb{R}$"
     ],
-    correct: 0,
-    explanation: "Rewrite $8 = 2^3$. Thus $2^{x - 1} > 2^3$. Since base $2 > 1$, $x - 1 > 3 \\implies x > 4$, or $(4, +\\infty)$."
+    correct: 2,
+    explanation: "Every integer is either odd or even. Together, the odd integers and even integers cover all of $\\mathbb{Z}$. Therefore $A \\cup B = \\mathbb{Z}$. [Sets Lecture — Worked Examples (Operations)]"
   },
   {
     id: 24,
-    question: "If $a > b > 0$, then which of the following inequalities is correct? ( )",
+    question: "Which of the following uses the correct notation? ( )",
     options: [
-      "A. $\\frac{1}{a} > \\frac{1}{b}$",
-      "B. $\\frac{1}{a} < \\frac{1}{b}$",
-      "C. $-\\frac{1}{a} < -\\frac{1}{b}$",
-      "D. \\frac{b}{a} > 1"
+      "A. $2 \\subseteq \\{1,2,3\\}$",
+      "B. $\\{2\\} \\in \\{1,2,3\\}$",
+      "C. $2 \\in \\{1,2,3\\}$",
+      "D. $\\{1,2\\} \\in \\{1,2,3\\}$"
     ],
-    correct: 1,
-    explanation: "Taking reciprocals of positive numbers reverses the inequality: $a > b > 0 \\implies \\frac{1}{a} < \\frac{1}{b}$[cite: 3]."
+    correct: 2,
+    explanation: "The symbol $\\in$ (belongs to) is used when an element is a member of a set. Since $2$ is an element of $\\{1,2,3\\}$, we write $2 \\in \\{1,2,3\\}$. Option A is wrong: $\\subseteq$ is for sets, not individual elements. Options B and D are wrong: $\\{2\\}$ and $\\{1,2\\}$ are sets and are not elements (members) of $\\{1,2,3\\}$; the correct notation would be $\\{2\\} \\subseteq \\{1,2,3\\}$. [Sets Lecture — Elements and Membership]"
   },
   {
     id: 25,
-    question: "If $x > 0$, $y > 0$, and $x + y = 10$, what is the maximum value of $xy$? ( )",
+    question: "Which of the following correctly describes the interval $[a,b)$? ( )",
     options: [
-      "A. $25$",
-      "B. $10$",
-      "C. $20$",
-      "D. $50$"
+      "A. $a < x < b$",
+      "B. $a \\leq x \\leq b$",
+      "C. $a \\leq x < b$",
+      "D. $a < x \\leq b$"
     ],
-    correct: 0,
-    explanation: "By the AM-GM inequality, $\\sqrt{xy} \\le \\frac{x + y}{2} = 5 \\implies xy \\le 25$. The maximum value is $25$, achieved when $x = y = 5$."
+    correct: 2,
+    explanation: "A square bracket $[$ means the endpoint IS included ($\\leq$), while a round bracket $)$ means the endpoint is NOT included ($<$). So $[a,b)$ represents $a \\leq x < b$: $x$ can equal $a$ but must be strictly less than $b$. [Sets Lecture — Intervals slide]"
   }
 ];
 
@@ -930,7 +931,7 @@
     let currentQIndex = 0;
     let userAnswers = new Array(questions.length).fill(null);
     let markedQuestions = new Array(questions.length).fill(false);
-    let examDurationSeconds = 45 * 60; // 45 minutes
+    let examDurationSeconds = 45 * 60; // 60 minutes
     let timeRemaining = examDurationSeconds;
     let timerInterval = null;
 
